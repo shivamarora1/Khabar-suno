@@ -34,3 +34,43 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+
+---------
+
+Planning:
+
+- You can't use the Kendo Paid and Only required to use atleast 10 Free Kendo Components.
+
+Dashboard
+Productivity App
+Personal Portfolio
+Or Something Completely Unique
+
+
+News Website:
+1. Button
+2. Icon
+3. Typography
+4. Adaptive Mode Context
+5. Card
+6. Date (May be; To see date based news)
+7. Drop Down (May be use for language; If it make sense)
+8. Button Group (May be use for language)
+9. Keyboard Navigation
+10. Pager for next page
+11. Dialog Box (May be give functionality to bookmark news)
+12. Skeleton
+13. PopUp
+14. Tooltip
+
+
+
+
+News List
+curl 'https://inshorts.com/api/en/news?category=top_stories&max_limit=10&include_card_data=true&news_offset=donoakud-1'
+
+
+Trending Topics
+curl 'https://inshorts.com/api/en/search/trending_topics
