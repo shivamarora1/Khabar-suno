@@ -1,5 +1,3 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
 ## Getting Started
 
 First, run the development server:
@@ -66,11 +64,10 @@ News Website:
 14. Tooltip
 
 
+### API endpoint:
 
+#### To get latest news:
+https://khabar-suno.vercel.app/api/en/news?category=top_stories&max_limit=10&include_card_data=true&news_offset=donoakud-1
 
-News List
-curl 'https://inshorts.com/api/en/news?category=top_stories&max_limit=10&include_card_data=true&news_offset=donoakud-1'
-
-
-Trending Topics
-curl 'https://inshorts.com/api/en/search/trending_topics
+#### To get news by topics:
+https://khabar-suno.vercel.app/api/en/search/trending_topics/business?page=1&type=CUSTOM_CATEGORY
