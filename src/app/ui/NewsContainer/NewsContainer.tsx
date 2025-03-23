@@ -15,11 +15,11 @@ export const NewsContainerComponent = ({
   const [news, setNews] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
+  // const [error, setError] = useState(null);
 
   const fetchNews = async () => {
     setIsLoading(true);
-    setError(null);
+    // setError(null);
     try {
       const res = await fetch(
         `/api/${language}/search/trending_topics/${category}?page=${currentPage}&type=CUSTOM_CATEGORY`
@@ -30,15 +30,16 @@ export const NewsContainerComponent = ({
       const data = await res.json();
       if (data.data.suggested_news) {
         const latest = news.concat(
-          data.data.suggested_news.map((item: any) => item.news_obj)
+          // eslint-disable-next-line
+          data.data.suggested_news.map((item: any) => item.news_obj) 
         );
         setNews(latest);
       } else {
         throw new Error("No news found");
       }
-    } catch (error: any) {
+    } catch {
       console.error("something went wrong; fetching news from api");
-      setError(error.message);
+      // setError(error.message);
     } finally {
       setIsLoading(false);
     }
