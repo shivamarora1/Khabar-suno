@@ -50,18 +50,14 @@ Or Something Completely Unique
 News Website:
 1. Button
 2. Icon
-3. Typography
-4. Adaptive Mode Context
-5. Card
-6. Date (May be; To see date based news)
-7. Drop Down (May be use for language; If it make sense)
-8. Button Group (May be use for language)
-9. Keyboard Navigation
-10. Pager for next page
-11. Dialog Box (May be give functionality to bookmark news)
-12. Skeleton
-13. PopUp
-14. Tooltip
+3. Skeleton
+4. Card
+5. Tooltip
+6. Typography
+7. Drop Down List
+8. AppBar
+9. Drawer
+10. Dialog Box
 
 
 ### API endpoint:

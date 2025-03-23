@@ -31,8 +31,8 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <MainContainerComponent>
-          <div className="">
-            <main className="">{children}</main>
+          <div className="flex justify-center h-[94vh]">
+            <main className="w-3xl">{children}</main>
           </div>
         </MainContainerComponent>
       </body>
