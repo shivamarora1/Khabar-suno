@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import { LRUCache } from "lru-cache";
 
 const cache = new LRUCache({
@@ -6,16 +6,16 @@ const cache = new LRUCache({
   ttlAutopurge: true,
 });
 
-export async function GET(
-  req: NextRequest,
-  { params }: { params: Promise<{ lang: string }> }
-) {
+export async function GET() {
+// req: NextRequest,
+// { params }: { params: Promise<{ lang: string }> }
   try {
     // const lang = (await params).lang;
     const cacheKey = "audio-response";
     if (cache.has(cacheKey)) {
       console.log("Returning from cache");
       const cachedAudio = cache.get(cacheKey);
+      // eslint-disable-next-line
       return new NextResponse(cachedAudio, {
         status: 200,
         headers: { "Content-Type": "audio/mpeg" },
