@@ -15,8 +15,7 @@ export async function GET() {
     if (cache.has(cacheKey)) {
       console.log("Returning from cache");
       const cachedAudio = cache.get(cacheKey);
-      // eslint-disable-next-line
-      return new NextResponse(cachedAudio, {
+      return new NextResponse(cachedAudio as BodyInit, {
         status: 200,
         headers: { "Content-Type": "audio/mpeg" },
       });
