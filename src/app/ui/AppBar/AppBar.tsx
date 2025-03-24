@@ -3,7 +3,8 @@ import {
   AppBarSection,
   AppBarSpacer,
 } from "@progress/kendo-react-layout";
-import { menuIcon } from "@progress/kendo-svg-icons";
+import { menuIcon, volumeUpIcon } from "@progress/kendo-svg-icons";
+
 import { Button } from "@progress/kendo-react-buttons";
 import { Typography } from "@progress/kendo-react-common";
 import {
@@ -14,9 +15,11 @@ import {
 export const AppBarComponent = ({
   menuClickCallback,
   languageChangeCallback,
+  toggleAudioDialog,
 }: {
   menuClickCallback: () => void;
   languageChangeCallback: (lang: string) => void;
+  toggleAudioDialog: () => void;
 }) => {
   const handleChange = (event: DropDownListChangeEvent) => {
     languageChangeCallback(event.target.value == "Hindi" ? "hi" : "en");
@@ -34,16 +37,16 @@ export const AppBarComponent = ({
 
       <AppBarSpacer style={{ width: 4 }} />
 
-      <AppBarSection className="w-5/10 md:w-7/10 xl:w-8/10">
+      <AppBarSection className="w-4/10 md:w-7/10 xl:w-8/10">
         <Typography.h5 className="!m-0">Khabar Suno</Typography.h5>
       </AppBarSection>
-      <div>
-        <DropDownList
-          data={["Hindi", "English"]}
-          defaultValue="English"
-          onChange={handleChange}
-        />
-      </div>
+
+      <Button svgIcon={volumeUpIcon} onClick={toggleAudioDialog} />
+      <DropDownList
+        data={["Hindi", "English"]}
+        defaultValue="English"
+        onChange={handleChange}
+      />
     </AppBar>
   );
 };

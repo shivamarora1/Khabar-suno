@@ -13,14 +13,13 @@ export async function GET(
     const newsOffset = req.nextUrl.searchParams.get("news_offset");
 
     const url = `https://inshorts.com/api/${lang}/news?category=${category}&max_limit=${maxLimit}&include_card_data=${includeCardData}&news_offset=${newsOffset}`;
-    
+
     const resp = await fetch(url);
     const data = await resp.json();
 
     return NextResponse.json(data);
   } catch (err) {
-    console.error("error in getting news")
-    throw err
+    console.error("error in getting news");
+    throw err;
   }
-
 }

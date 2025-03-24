@@ -19,6 +19,7 @@
     "@progress/kendo-react-treeview": "^10.0.0",
     "@progress/kendo-svg-icons": "^4.0.0",
     "@progress/kendo-theme-default": "^10.4.0",
+    "lru-cache": "^11.0.2",
     "next": "15.2.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
