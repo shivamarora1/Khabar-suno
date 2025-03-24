@@ -7,8 +7,8 @@ const cache = new LRUCache({
 });
 
 export async function GET() {
-// req: NextRequest,
-// { params }: { params: Promise<{ lang: string }> }
+  // req: NextRequest,
+  // { params }: { params: Promise<{ lang: string }> }
   try {
     // const lang = (await params).lang;
     const cacheKey = "audio-response";
@@ -26,7 +26,7 @@ export async function GET() {
     const resp = await fetch(url);
     const apiData = await resp.json();
     const newsContentArr = apiData.data.news_list.map(
-      (item) => item.news_obj.content
+      (item: { news_obj: { content: string } }) => item.news_obj.content
     );
     const newsContent = newsContentArr.join("\n");
 
